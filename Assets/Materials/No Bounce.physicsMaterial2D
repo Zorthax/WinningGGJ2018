@@ -5,6 +5,6 @@ PhysicsMaterial2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Better Physics
-  friction: 0.1
-  bounciness: 0.7
+  m_Name: No Bounce
+  friction: 1
+  bounciness: 0

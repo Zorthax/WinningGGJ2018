@@ -33,6 +33,7 @@ public class BallPhysics : MonoBehaviour {
         {
             rb.gravityScale = 0;
             rb.velocity = Vector3.zero;
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
             rb.isKinematic = true;
         }
         else
@@ -40,6 +41,8 @@ public class BallPhysics : MonoBehaviour {
         {
             rb.gravityScale = 1;
             rb.isKinematic = false;
+            rb.constraints = RigidbodyConstraints2D.None;
+            
         }
     }
 
@@ -53,6 +56,7 @@ public class BallPhysics : MonoBehaviour {
         {
             physicsMode = PhysicsMode.normal;
             startButton.GetComponentInChildren<Text>().text = "End";
+            transform.rotation = Quaternion.Euler(0, 0, 0);
         }
     }
 

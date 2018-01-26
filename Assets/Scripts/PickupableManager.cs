@@ -5,11 +5,13 @@ using UnityEngine;
 public class PickupableManager : MonoBehaviour {
 
     Pickupable[] pickupables;
+    ConstantRotation[] rotaters;
 	// Use this for initialization
 	void Start ()
     {
         pickupables = FindObjectsOfType<Pickupable>();
-	}
+        rotaters = FindObjectsOfType<ConstantRotation>();
+    }
 	
 	public void ResetPositions()
     {
@@ -17,4 +19,14 @@ public class PickupableManager : MonoBehaviour {
             p.ReturnToStart();
             
     }
+
+    public void Begin()
+    {
+        foreach (ConstantRotation c in rotaters)
+        {
+            c.ResetRotation();
+        }
+    }
+
+
 }
