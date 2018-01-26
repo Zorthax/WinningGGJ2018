@@ -10,8 +10,12 @@ public class Pickupable : MonoBehaviour {
     Collider2D col;
     Vector3 disposition;
 
+    public bool hasRigidbody;
     public bool childRigidbodies;
     public int numberOfChildren;
+    Vector3 placedPos;
+    Quaternion placedRot;
+    Rigidbody2D rb;
     Child[] children;
 
     class Child
@@ -33,7 +37,12 @@ public class Pickupable : MonoBehaviour {
         mainCam = Camera.main;
         inventoryPos = transform.position;
         col = GetComponent<Collider2D>();
-
+        placedRot = transform.rotation;
+        if (hasRigidbody)
+        {
+            rb = GetComponent<Rigidbody2D>();
+            rb.isKinematic = true;
+        }
 
         if (!childRigidbodies)
             return;
@@ -47,6 +56,9 @@ public class Pickupable : MonoBehaviour {
             children[counter].pos = rb.transform.localPosition;
             counter++;
         }
+
+        
+
 	}
 	
 	// Update is called once per frame
@@ -54,6 +66,8 @@ public class Pickupable : MonoBehaviour {
     {
         if (PlaymodeManager.mode == PlaymodeManager.Mode.playing)
         {
+            if (rb && state == State.placed)
+                rb.isKinematic = false;
             if (childRigidbodies && state == State.placed)
             {
                 foreach (Child c in children)
@@ -89,7 +103,11 @@ public class Pickupable : MonoBehaviour {
         if (Input.GetMouseButtonUp(0))
         {
             if (state == State.dragging)
+            {
                 state = State.placed;
+                if (hasRigidbody)
+                    placedPos = transform.position;
+            }
         }
     }
 
@@ -110,6 +128,14 @@ public class Pickupable : MonoBehaviour {
                 c.rb.constraints = RigidbodyConstraints2D.FreezeRotation;
                 c.rb.transform.rotation = Quaternion.Euler(0, 0, 0);
             }
+        }
+        if (hasRigidbody && state == State.placed)
+        {
+            transform.position = placedPos;
+            transform.rotation = placedRot;
+            rb.velocity = Vector3.zero;
+            rb.isKinematic = true;
+            
         }
     }
 }
