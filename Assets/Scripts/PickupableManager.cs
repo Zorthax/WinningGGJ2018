@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PickupableManager : MonoBehaviour {
 
-    Pickupable[] pickupables;
-    ConstantRotation[] rotaters;
+    static Pickupable[] pickupables;
+    static ConstantRotation[] rotaters;
 	// Use this for initialization
 	void Start ()
     {
@@ -13,14 +13,14 @@ public class PickupableManager : MonoBehaviour {
         rotaters = FindObjectsOfType<ConstantRotation>();
     }
 	
-	public void ResetPositions()
+	static public void ResetPositions()
     {
         foreach (Pickupable p in pickupables)
             p.ReturnToStart();
             
     }
 
-    public void Begin()
+    static public void Begin()
     {
         foreach (ConstantRotation c in rotaters)
         {

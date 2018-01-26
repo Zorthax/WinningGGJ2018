@@ -28,8 +28,11 @@ public class Pickupable : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+        if (PlaymodeManager.mode == PlaymodeManager.Mode.playing)
+            return;
+
         Vector3 pos = Input.mousePosition;
-        pos.z = 10;
+        pos.z = 12;
         Vector3 touchPos = mainCam.ScreenToWorldPoint(pos);
         touchPos.z = transform.position.z;
 

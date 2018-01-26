@@ -5,9 +5,15 @@ using UnityEngine.UI;
 
 public class BallPhysics : MonoBehaviour {
 
+    public float secondsToLive;
     PhysicsMode physicsMode;
     Rigidbody2D rb;
     Vector3 startPos;
+    float timer;
+
+    public Color startColor;
+    public Color endColor;
+    public Material pufferMaterial;
 
     [SerializeField]
     private Button startButton;
@@ -15,7 +21,8 @@ public class BallPhysics : MonoBehaviour {
     {
         frozen,
         normal,
-        water
+        water,
+        puffed
     }
 
 	// Use this for initialization
@@ -24,6 +31,7 @@ public class BallPhysics : MonoBehaviour {
         physicsMode = PhysicsMode.frozen;
         rb = GetComponent<Rigidbody2D>();
         startPos = transform.position;
+        pufferMaterial.color = startColor;
 	}
 	
 	// Update is called once per frame
@@ -31,10 +39,14 @@ public class BallPhysics : MonoBehaviour {
     {
 		if (physicsMode == PhysicsMode.frozen)
         {
+            transform.position = startPos;
             rb.gravityScale = 0;
             rb.velocity = Vector3.zero;
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
             rb.isKinematic = true;
+
+            timer = 0;
+            pufferMaterial.color = startColor;
         }
         else
             if (physicsMode == PhysicsMode.normal)
@@ -42,7 +54,29 @@ public class BallPhysics : MonoBehaviour {
             rb.gravityScale = 1;
             rb.isKinematic = false;
             rb.constraints = RigidbodyConstraints2D.None;
-            
+            rb.drag = 0.05f;
+
+            if (timer < secondsToLive)
+                timer += Time.deltaTime;
+            pufferMaterial.color = Color.Lerp(startColor, endColor, timer / secondsToLive);
+        }
+        else
+            if (physicsMode == PhysicsMode.water)
+        {
+            rb.gravityScale = 0.1f;
+            rb.isKinematic = false;
+            rb.constraints = RigidbodyConstraints2D.None;
+            rb.drag = 1.2f;
+
+        }
+        else
+            if (physicsMode == PhysicsMode.puffed)
+        {
+            rb.gravityScale = 0.8f;
+            rb.isKinematic = false;
+            rb.constraints = RigidbodyConstraints2D.None;
+            rb.drag = 0.1f;
+
         }
     }
 
@@ -64,6 +98,21 @@ public class BallPhysics : MonoBehaviour {
     {
         physicsMode = PhysicsMode.frozen;
         startButton.GetComponentInChildren<Text>().text = "Start";
-        transform.position = startPos;
+        
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Water")
+        {
+            physicsMode = PhysicsMode.water;
+        }
+    }
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.tag == "Water")
+        {
+            physicsMode = PhysicsMode.normal;
+        }
     }
 }
