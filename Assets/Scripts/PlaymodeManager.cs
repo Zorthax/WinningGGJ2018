@@ -30,6 +30,8 @@ public class PlaymodeManager : MonoBehaviour {
             mode = Mode.playing;
         else mode = Mode.paused;
 
+        if (mode == Mode.paused)
+            PickupableManager.Pause();
 
     }
 

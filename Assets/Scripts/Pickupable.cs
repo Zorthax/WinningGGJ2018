@@ -9,6 +9,16 @@ public class Pickupable : MonoBehaviour {
     Camera mainCam;
     Collider2D col;
     Vector3 disposition;
+
+    public bool childRigidbodies;
+    public int numberOfChildren;
+    Child[] children;
+
+    class Child
+    {
+        public Rigidbody2D rb;
+        public Vector3 pos;
+    }
     
     enum State
     {
@@ -23,13 +33,38 @@ public class Pickupable : MonoBehaviour {
         mainCam = Camera.main;
         inventoryPos = transform.position;
         col = GetComponent<Collider2D>();
+
+
+        if (!childRigidbodies)
+            return;
+        children = new Child[numberOfChildren];
+        int counter = 0;
+        foreach (Rigidbody2D rb in GetComponentsInChildren<Rigidbody2D>())
+        {
+            rb.isKinematic = true;
+            children[counter] = new Child();
+            children[counter].rb = rb;
+            children[counter].pos = rb.transform.localPosition;
+            counter++;
+        }
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
         if (PlaymodeManager.mode == PlaymodeManager.Mode.playing)
+        {
+            if (childRigidbodies && state == State.placed)
+            {
+                foreach (Child c in children)
+                {
+                    c.rb.isKinematic = false;
+                    c.rb.constraints = RigidbodyConstraints2D.None;
+                }
+            }
             return;
+        }
+        
 
         Vector3 pos = Input.mousePosition;
         pos.z = 12;
@@ -61,5 +96,20 @@ public class Pickupable : MonoBehaviour {
     public void ReturnToStart()
     {
         transform.position = inventoryPos;
+    }
+
+    public void OnPause()
+    {
+        if (childRigidbodies)
+        {
+            foreach (Child c in children)
+            {
+                c.rb.isKinematic = true;
+                c.rb.transform.localPosition = c.pos;
+                c.rb.velocity = Vector3.zero;
+                c.rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+                c.rb.transform.rotation = Quaternion.Euler(0, 0, 0);
+            }
+        }
     }
 }

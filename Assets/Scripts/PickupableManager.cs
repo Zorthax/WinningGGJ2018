@@ -28,5 +28,11 @@ public class PickupableManager : MonoBehaviour {
         }
     }
 
+    static public void Pause()
+    {
+        foreach (Pickupable p in pickupables)
+            p.OnPause();
+    }
+
 
 }
