@@ -47,14 +47,19 @@ public class BallPhysics : MonoBehaviour {
     {
         if (physicsMode != PhysicsMode.frozen)
         {
-            physicsMode = PhysicsMode.frozen;
-            startButton.GetComponentInChildren<Text>().text = "Start";
-            transform.position = startPos;
+            End();
         }
         else
         {
             physicsMode = PhysicsMode.normal;
             startButton.GetComponentInChildren<Text>().text = "End";
         }
+    }
+
+    public void End()
+    {
+        physicsMode = PhysicsMode.frozen;
+        startButton.GetComponentInChildren<Text>().text = "Start";
+        transform.position = startPos;
     }
 }
