@@ -15,6 +15,7 @@ public class BallPhysics : MonoBehaviour {
     public Color endColor;
     public Material pufferMaterial;
     public Animator anim;
+    public AudioSource source;
 
     [SerializeField]
     private Button startButton;
@@ -41,6 +42,7 @@ public class BallPhysics : MonoBehaviour {
 		if (physicsMode == PhysicsMode.frozen)
         {
             transform.position = startPos;
+            transform.rotation = Quaternion.Euler(0, 0, 0);
             rb.gravityScale = 0;
             rb.velocity = Vector3.zero;
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;

@@ -10,13 +10,16 @@ public class Pickupable : MonoBehaviour {
     Collider2D col;
     Vector3 disposition;
 
+    public AudioClip place;
     public bool hasRigidbody;
     public bool childRigidbodies;
     public int numberOfChildren;
+    AudioSource source;
     Vector3 placedPos;
     Quaternion placedRot;
     Rigidbody2D rb;
     Child[] children;
+    bool mouseOver;
 
     class Child
     {
@@ -35,6 +38,7 @@ public class Pickupable : MonoBehaviour {
 	void Start ()
     {
         mainCam = Camera.main;
+        source = gameObject.AddComponent<AudioSource>();
         inventoryPos = transform.position;
         col = GetComponent<Collider2D>();
         placedRot = transform.rotation;
@@ -104,9 +108,26 @@ public class Pickupable : MonoBehaviour {
         {
             if (state == State.dragging)
             {
+                source.PlayOneShot(Resources.Load<AudioClip>("Audio/click"));
                 state = State.placed;
                 if (hasRigidbody)
                     placedPos = transform.position;
+            }
+        }
+
+        if (!Input.GetMouseButton(0))
+        {
+            if (state != State.dragging)
+            {
+                if (!mouseOver && col.bounds.Contains(touchPos))
+                {
+                    source.PlayOneShot(Resources.Load<AudioClip>("Audio/hover"));
+                    mouseOver = true;
+                }
+                else if (mouseOver && !col.bounds.Contains(touchPos))
+                {
+                    mouseOver = false;
+                }
             }
         }
     }
