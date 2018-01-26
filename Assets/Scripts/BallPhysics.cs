@@ -14,6 +14,7 @@ public class BallPhysics : MonoBehaviour {
     public Color startColor;
     public Color endColor;
     public Material pufferMaterial;
+    public Animator anim;
 
     [SerializeField]
     private Button startButton;
@@ -106,13 +107,25 @@ public class BallPhysics : MonoBehaviour {
         if (other.tag == "Water")
         {
             physicsMode = PhysicsMode.water;
+            Destroy(Instantiate(Resources.Load("Splash"), transform.position, Quaternion.Euler(-90, 0, 0)), 4);
         }
+        
     }
     void OnTriggerExit2D(Collider2D other)
     {
         if (other.tag == "Water")
         {
             physicsMode = PhysicsMode.normal;
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.transform.tag == "Jack" && physicsMode == PhysicsMode.normal)
+        {
+            anim.SetBool("puff", true);
+            physicsMode = PhysicsMode.puffed;
+
         }
     }
 }
