@@ -10,7 +10,6 @@ public class Pickupable : MonoBehaviour {
     Collider2D col;
     Vector3 disposition;
 
-    public AudioClip place;
     public bool hasRigidbody;
     public bool childRigidbodies;
     public int numberOfChildren;
@@ -114,7 +113,7 @@ public class Pickupable : MonoBehaviour {
         {
             if (state == State.dragging)
             {
-                source.PlayOneShot(Resources.Load<AudioClip>("Audio/SFX/click"));
+                source.PlayOneShot(Resources.Load<AudioClip>("Audio/SFX/UI/click"));
                 state = State.placed;
                 if (hasRigidbody)
                     placedPos = transform.position;
@@ -127,7 +126,7 @@ public class Pickupable : MonoBehaviour {
             {
                 if (!mouseOver && col.bounds.Contains(touchPos))
                 {
-                    source.PlayOneShot(Resources.Load<AudioClip>("Audio/SFX/hover"));
+                    source.PlayOneShot(Resources.Load<AudioClip>("Audio/SFX/UI/hover"));
                     Debug.Log(source.volume);
                     mouseOver = true;
                 }
