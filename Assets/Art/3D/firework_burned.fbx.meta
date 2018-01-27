@@ -1,63 +1,67 @@
 fileFormatVersion: 2
-guid: fd1e705905b936e4ab81b9ca9ee939a1
-timeCreated: 1517059098
+guid: 1e0b9e83e2f6d7b4caee650612494501
+timeCreated: 1517093274
 licenseType: Pro
 ModelImporter:
   serializedVersion: 21
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: lampShade1
-    100004: lampShade2
-    100006: lampShade3
-    100008: lampShade4
-    100010: lampShade5
-    100012: lampShade6
-    100014: lampShade7
-    100016: lampShade8
-    100018: lampShade_pieces
-    100020: lampStand_broken
-    100022: lampStand_broken_inside
-    100024: lampStand_broken_outside
-    400000: //RootNode
-    400002: lampShade1
-    400004: lampShade2
-    400006: lampShade3
-    400008: lampShade4
-    400010: lampShade5
-    400012: lampShade6
-    400014: lampShade7
-    400016: lampShade8
-    400018: lampShade_pieces
-    400020: lampStand_broken
-    400022: lampStand_broken_inside
-    400024: lampStand_broken_outside
-    2300000: lampShade1
-    2300002: lampShade2
-    2300004: lampShade3
-    2300006: lampShade4
-    2300008: lampShade5
-    2300010: lampShade6
-    2300012: lampShade7
-    2300014: lampShade8
-    2300016: lampStand_broken_inside
-    3300000: lampShade1
-    3300002: lampShade2
-    3300004: lampShade3
-    3300006: lampShade4
-    3300008: lampShade5
-    3300010: lampShade6
-    3300012: lampShade7
-    3300014: lampShade8
-    3300016: lampStand_broken_inside
-    4300000: lampShade1
-    4300002: lampShade2
-    4300004: lampShade3
-    4300006: lampShade4
-    4300008: lampShade5
-    4300010: lampShade6
-    4300012: lampShade7
-    4300014: lampShade8
-    4300016: lampStand_broken_inside
+    100000: bodyAndHead
+    100002: //RootNode
+    100004: fireWorkRocket_burned1
+    100006: fireWorkRocket_burned2
+    100008: neck
+    100010: tail1
+    100012: tail10
+    100014: tail2
+    100016: tail3
+    100018: tail4
+    100020: tail5
+    100022: tail6
+    100024: tail7
+    100026: tail8
+    100028: tail9
+    100030: transform1
+    100032: transform10
+    100034: transform11
+    100036: transform12
+    100038: transform2
+    100040: transform3
+    100042: transform4
+    100044: transform5
+    100046: transform6
+    100048: transform7
+    100050: transform8
+    100052: transform9
+    400000: bodyAndHead
+    400002: //RootNode
+    400004: fireWorkRocket_burned1
+    400006: fireWorkRocket_burned2
+    400008: neck
+    400010: tail1
+    400012: tail10
+    400014: tail2
+    400016: tail3
+    400018: tail4
+    400020: tail5
+    400022: tail6
+    400024: tail7
+    400026: tail8
+    400028: tail9
+    400030: transform1
+    400032: transform10
+    400034: transform11
+    400036: transform12
+    400038: transform2
+    400040: transform3
+    400042: transform4
+    400044: transform5
+    400046: transform6
+    400048: transform7
+    400050: transform8
+    400052: transform9
+    2300000: fireWorkRocket_burned2
+    3300000: fireWorkRocket_burned2
+    4300000: fireWorkRocket_burned2
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -103,7 +107,7 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 0
+    useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
