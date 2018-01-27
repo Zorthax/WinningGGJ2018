@@ -312,6 +312,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6175987cf55ccd647bdfa0c1ba0bd1b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fastestTime: 60
+  fastTime: 150
+  slowTime: 240
+  fastestPhrase: {fileID: 8300000, guid: 939f2cd9783f13a43bcc5efd64cb327a, type: 3}
+  fastPhrase: {fileID: 8300000, guid: cabe896ec5c699846baf0161ad4366d9, type: 3}
+  slowPhrase: {fileID: 8300000, guid: a894570f8ba219a4392fe81e545b9fda, type: 3}
+  slowestPhrase: {fileID: 8300000, guid: b8c00bc0de3eec941bdec3bd3e69f33e, type: 3}
   nextScene: bounce_level
 --- !u!114 &114746902145756212
 MonoBehaviour:

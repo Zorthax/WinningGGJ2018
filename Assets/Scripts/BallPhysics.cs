@@ -18,6 +18,8 @@ public class BallPhysics : MonoBehaviour {
     public AudioSource source;
     public ParticleSystem bigSplat;
     public ParticleSystem smallSplat;
+    public AudioClip[] ouchSounds;
+    public AudioClip[] startSounds;
 
     enum PhysicsMode
     {
@@ -34,11 +36,16 @@ public class BallPhysics : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
         startPos = transform.position;
         pufferMaterial.color = startColor;
-	}
+
+        source.volume = VolumeManager.dialogueVolume;
+        source.PlayOneShot(startSounds[Random.Range(0, startSounds.Length)]);
+    }
 	
 	// Update is called once per frame
 	void Update ()
     {
+        
+
 		if (physicsMode == PhysicsMode.frozen)
         {
             transform.position = startPos;
@@ -62,6 +69,10 @@ public class BallPhysics : MonoBehaviour {
             if (timer < secondsToLive)
                 timer += Time.deltaTime;
             pufferMaterial.color = Color.Lerp(startColor, endColor, timer / secondsToLive);
+            if (timer >= secondsToLive)
+            {
+                Pop();
+            }
         }
         else
             if (physicsMode == PhysicsMode.water)
@@ -79,7 +90,10 @@ public class BallPhysics : MonoBehaviour {
             rb.isKinematic = false;
             rb.constraints = RigidbodyConstraints2D.None;
             rb.drag = 0.1f;
-
+            if (timer >= secondsToLive)
+            {
+                Pop();
+            }
         }
     }
 
@@ -108,6 +122,7 @@ public class BallPhysics : MonoBehaviour {
         {
             physicsMode = PhysicsMode.water;
             Destroy(Instantiate(Resources.Load("Splash"), transform.position, Quaternion.Euler(-90, 0, 0)), 4);
+            source.volume = VolumeManager.sfxVolume;
             source.PlayOneShot(Resources.Load<AudioClip>("Audio/splash_calm"));
         }
         
@@ -125,7 +140,18 @@ public class BallPhysics : MonoBehaviour {
         if (rb.velocity.magnitude > 5)
             bigSplat.Play();
         else if (rb.velocity.magnitude > 2)
+        {
             smallSplat.Play();
+            source.volume = VolumeManager.dialogueVolume;
+            source.PlayOneShot(ouchSounds[Random.Range(0, ouchSounds.Length)]);
+        }
+
+        if (rb.velocity.magnitude > 3)
+        {
+            source.volume = VolumeManager.dialogueVolume;
+            source.PlayOneShot(ouchSounds[Random.Range(0, ouchSounds.Length)]);
+        }
+
         if (other.transform.tag == "Jack" && physicsMode == PhysicsMode.normal)
         {
             anim.SetBool("puff", true);
@@ -133,5 +159,16 @@ public class BallPhysics : MonoBehaviour {
             rb.AddForce((transform.position - other.transform.position) * 5f);
 
         }
+    }
+
+    void Pop()
+    {
+        foreach(ParticleSystem p in GetComponentsInChildren<ParticleSystem>())
+        {
+            p.Play();
+        }
+        End();
+        PlaymodeManager.mode = PlaymodeManager.Mode.paused;
+        PickupableManager.Pause();
     }
 }
