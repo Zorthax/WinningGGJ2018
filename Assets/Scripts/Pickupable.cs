@@ -9,6 +9,7 @@ public class Pickupable : MonoBehaviour {
     Camera mainCam;
     Collider2D col;
     Vector3 disposition;
+    public static float objectDepth;
 
     public bool hasRigidbody;
     public bool childRigidbodies;
@@ -90,7 +91,7 @@ public class Pickupable : MonoBehaviour {
 
         glow.SetActive(mouseOver);
         Vector3 pos = Input.mousePosition;
-        pos.z = 12;
+        pos.z = transform.position.z - mainCam.transform.position.z;
         Vector3 touchPos = mainCam.ScreenToWorldPoint(pos);
         touchPos.z = transform.position.z;
 

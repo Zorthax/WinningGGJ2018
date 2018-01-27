@@ -15,6 +15,9 @@ ModelImporter:
     100014: kookooClockDoorR_01
     100016: kookooClockDoorR_end
     100018: kookooClockRig
+    100020: kookooBigHand
+    100022: kookooKnob
+    100024: kookooLittleHand
     400000: KookooClock
     400002: kookooClock
     400004: //RootNode
@@ -25,11 +28,23 @@ ModelImporter:
     400014: kookooClockDoorR_01
     400016: kookooClockDoorR_end
     400018: kookooClockRig
+    400020: kookooBigHand
+    400022: kookooKnob
+    400024: kookooLittleHand
     2300000: kookooClock
+    2300002: kookooBigHand
+    2300004: kookooKnob
+    2300006: kookooLittleHand
     3300000: kookooClock
+    3300002: kookooBigHand
+    3300004: kookooKnob
+    3300006: kookooLittleHand
     4300000: kookooClock
     4300002: kookooClockDoorR
     4300004: kookooClockDoorL
+    4300006: kookooKnob
+    4300008: kookooBigHand
+    4300010: kookooLittleHand
     7400000: Take 001
     9500000: //RootNode
     13700000: kookooClockDoorL
