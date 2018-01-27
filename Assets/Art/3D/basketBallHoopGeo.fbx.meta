@@ -1,55 +1,15 @@
 fileFormatVersion: 2
-guid: 1bec61a612ef97c4699cc4adfbf6b3ef
-timeCreated: 1517060868
-licenseType: Pro
+guid: d4f5e2cd5f361fb498930c61327213a3
+timeCreated: 1517054891
+licenseType: Free
 ModelImporter:
   serializedVersion: 21
   fileIDToRecycleName:
     100000: //RootNode
-    100002: lampShade1
-    100004: lampShade3
-    100006: lampShade4
-    100008: lampShade5
-    100010: lampShade6
-    100012: lampShade7
-    100014: lampShade8
-    100016: lampStand_broken_inside
-    100018: lampStand_broken_outside
     400000: //RootNode
-    400002: lampShade1
-    400004: lampShade3
-    400006: lampShade4
-    400008: lampShade5
-    400010: lampShade6
-    400012: lampShade7
-    400014: lampShade8
-    400016: lampStand_broken_inside
-    400018: lampStand_broken_outside
-    2300000: lampShade1
-    2300002: lampShade3
-    2300004: lampShade4
-    2300006: lampShade5
-    2300008: lampShade6
-    2300010: lampShade7
-    2300012: lampShade8
-    2300014: lampStand_broken_inside
-    3300000: lampShade1
-    3300002: lampShade3
-    3300004: lampShade4
-    3300006: lampShade5
-    3300008: lampShade6
-    3300010: lampShade7
-    3300012: lampShade8
-    3300014: lampStand_broken_inside
-    4300000: lampShade8
-    4300002: lampShade7
-    4300004: lampShade6
-    4300006: lampShade5
-    4300008: lampShade4
-    4300010: lampShade3
-    4300012: lampShade1
-    4300014: lampStand_broken_inside
-    9500000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: basketballHoop
   materials:
     importMaterials: 1
     materialName: 0
@@ -119,7 +79,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

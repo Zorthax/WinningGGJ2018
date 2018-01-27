@@ -17,7 +17,7 @@ public class Pickupable : MonoBehaviour {
     AudioSource source;
     Vector3 placedPos;
     Quaternion placedRot;
-    protected Rigidbody2D rb;
+    Rigidbody2D rb;
     Child[] children;
     bool mouseOver;
     GameObject glow;

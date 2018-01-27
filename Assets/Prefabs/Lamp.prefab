@@ -101,7 +101,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4156332477806630}
   - component: {fileID: 95180811964685036}
-  - component: {fileID: 60155207686340824}
   m_Layer: 0
   m_Name: Lamp
   m_TagString: Untagged
@@ -131,8 +130,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1945200037824092}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.61, y: -4.82, z: 4}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: -6.14, y: -0.64015007, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4348274183661058}
   - {fileID: 4859751690574432}
@@ -280,40 +279,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &60155207686340824
-PolygonCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1945200037824092}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.35043383, y: 1.5470023}
-      - {x: 0.3362322, y: 1.2359815}
-      - {x: -0.33156967, y: 1.228676}
-      - {x: -0.34867525, y: 1.5341406}
-      - {x: -0.59306383, y: 0.76575136}
-      - {x: -0.16583109, y: 0.7633449}
-      - {x: -0.22505617, y: 0.016566277}
-      - {x: 0.21028471, y: 0.040854692}
-      - {x: 0.22871923, y: 0.77210724}
-      - {x: 0.62941027, y: 0.77547383}
 --- !u!60 &60912325608833540
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -342,10 +307,7 @@ PolygonCollider2D:
       - {x: -0.78031063, y: 0.61636037}
       - {x: -0.7790215, y: -0.62461084}
       - {x: 0.020907613, y: -0.35824683}
-      - {x: 0.02095172, y: -0.28325418}
-      - {x: -0.35934767, y: -0.40016225}
-      - {x: -0.36000988, y: 0.38872585}
-      - {x: 0.021693857, y: 0.2974663}
+      - {x: 0.008536339, y: -0.0051560416}
 --- !u!95 &95180811964685036
 Animator:
   serializedVersion: 3
@@ -422,7 +384,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 9.61, y: -1.7322297}
+  m_ConnectedAnchor: {x: -6.14, y: 0.90373516}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
