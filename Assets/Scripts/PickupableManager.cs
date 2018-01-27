@@ -6,11 +6,13 @@ public class PickupableManager : MonoBehaviour {
 
     static Pickupable[] pickupables;
     static ConstantRotation[] rotaters;
+    public float objectDepth;
 	// Use this for initialization
 	void Start ()
     {
         pickupables = FindObjectsOfType<Pickupable>();
         rotaters = FindObjectsOfType<ConstantRotation>();
+        Pickupable.objectDepth = objectDepth;
     }
 	
 	static public void ResetPositions()
