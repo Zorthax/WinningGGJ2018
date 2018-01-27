@@ -17,8 +17,6 @@ public class BallPhysics : MonoBehaviour {
     public Animator anim;
     public AudioSource source;
 
-    [SerializeField]
-    private Button startButton;
     enum PhysicsMode
     {
         frozen,
@@ -92,7 +90,6 @@ public class BallPhysics : MonoBehaviour {
         else
         {
             physicsMode = PhysicsMode.normal;
-            startButton.GetComponentInChildren<Text>().text = "End";
             transform.rotation = Quaternion.Euler(0, 0, 0);
         }
     }
@@ -100,7 +97,6 @@ public class BallPhysics : MonoBehaviour {
     public void End()
     {
         physicsMode = PhysicsMode.frozen;
-        startButton.GetComponentInChildren<Text>().text = "Start";
         
     }
 
