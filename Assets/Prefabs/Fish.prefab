@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 82793150297957998}
   m_Layer: 0
   m_Name: Fish
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1885,7 +1885,8 @@ MonoBehaviour:
   pufferMaterial: {fileID: 2100000, guid: be806f972c6fcbb4081749fa02c7180d, type: 2}
   anim: {fileID: 95929695941438680}
   source: {fileID: 82793150297957998}
-  startButton: {fileID: 0}
+  bigSplat: {fileID: 0}
+  smallSplat: {fileID: 0}
 --- !u!137 &137011078166942052
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

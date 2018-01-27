@@ -16,6 +16,8 @@ public class BallPhysics : MonoBehaviour {
     public Material pufferMaterial;
     public Animator anim;
     public AudioSource source;
+    public ParticleSystem bigSplat;
+    public ParticleSystem smallSplat;
 
     enum PhysicsMode
     {
@@ -120,10 +122,15 @@ public class BallPhysics : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D other)
     {
+        if (rb.velocity.magnitude > 5)
+            bigSplat.Play();
+        else if (rb.velocity.magnitude > 2)
+            smallSplat.Play();
         if (other.transform.tag == "Jack" && physicsMode == PhysicsMode.normal)
         {
             anim.SetBool("puff", true);
             physicsMode = PhysicsMode.puffed;
+            rb.AddForce((transform.position - other.transform.position) * 5f);
 
         }
     }

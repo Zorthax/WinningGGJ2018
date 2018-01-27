@@ -22,6 +22,7 @@ public class Pickupable : MonoBehaviour {
     bool mouseOver;
     GameObject glow;
 
+    
     class Child
     {
         public Rigidbody2D rb;
