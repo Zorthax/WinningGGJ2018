@@ -110,6 +110,7 @@ public class BallPhysics : MonoBehaviour {
         {
             physicsMode = PhysicsMode.water;
             Destroy(Instantiate(Resources.Load("Splash"), transform.position, Quaternion.Euler(-90, 0, 0)), 4);
+            source.PlayOneShot(Resources.Load<AudioClip>("Audio/splash_calm"));
         }
         
     }

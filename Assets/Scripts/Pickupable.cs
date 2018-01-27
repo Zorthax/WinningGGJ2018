@@ -20,6 +20,7 @@ public class Pickupable : MonoBehaviour {
     Rigidbody2D rb;
     Child[] children;
     bool mouseOver;
+    GameObject glow;
 
     class Child
     {
@@ -47,6 +48,9 @@ public class Pickupable : MonoBehaviour {
             rb = GetComponent<Rigidbody2D>();
             rb.isKinematic = true;
         }
+
+        glow = Instantiate(Resources.Load("glow"), transform) as GameObject;
+        glow.transform.rotation = Quaternion.Euler(Vector3.zero);
 
         if (!childRigidbodies)
             return;
@@ -82,8 +86,8 @@ public class Pickupable : MonoBehaviour {
             }
             return;
         }
-        
 
+        glow.SetActive(mouseOver);
         Vector3 pos = Input.mousePosition;
         pos.z = 12;
         Vector3 touchPos = mainCam.ScreenToWorldPoint(pos);
