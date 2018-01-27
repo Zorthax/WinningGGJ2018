@@ -17,7 +17,7 @@ public class ArrowSpinAndDisappear : MonoBehaviour {
     {
 		if (spinning)
         {
-            spinSpeed *= 1.1f + Time.deltaTime;
+            spinSpeed *= 1.05f + Time.deltaTime;
             transform.Rotate(0, spinSpeed, spinSpeed* Time.deltaTime, 0);
             if (spinSpeed > 500)
                 Destroy(gameObject);

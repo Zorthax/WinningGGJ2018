@@ -73,6 +73,7 @@ public class Pickupable : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+        source.volume = VolumeManager.sfxVolume;
         if (PlaymodeManager.mode == PlaymodeManager.Mode.playing)
         {
             if (rb && state == State.placed)
@@ -113,7 +114,7 @@ public class Pickupable : MonoBehaviour {
         {
             if (state == State.dragging)
             {
-                source.PlayOneShot(Resources.Load<AudioClip>("Audio/click"));
+                source.PlayOneShot(Resources.Load<AudioClip>("Audio/SFX/click"));
                 state = State.placed;
                 if (hasRigidbody)
                     placedPos = transform.position;
@@ -126,7 +127,8 @@ public class Pickupable : MonoBehaviour {
             {
                 if (!mouseOver && col.bounds.Contains(touchPos))
                 {
-                    source.PlayOneShot(Resources.Load<AudioClip>("Audio/hover"));
+                    source.PlayOneShot(Resources.Load<AudioClip>("Audio/SFX/hover"));
+                    Debug.Log(source.volume);
                     mouseOver = true;
                 }
                 else if (mouseOver && !col.bounds.Contains(touchPos))
