@@ -50,7 +50,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4482918378071198}
   - component: {fileID: 95311159843644724}
-  - component: {fileID: 114420748058466690}
+  - component: {fileID: 114746902145756212}
   m_Layer: 0
   m_Name: arrowAnim
   m_TagString: Untagged
@@ -67,8 +67,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4967627137497802}
   - component: {fileID: 33542512555036460}
-  - component: {fileID: 136707550022971972}
   - component: {fileID: 23577834066375748}
+  - component: {fileID: 114547198675807050}
+  - component: {fileID: 61976607695224588}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -129,7 +130,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1967786204381474}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 2}
+  m_LocalPosition: {x: 6, y: -1.35, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4482918378071198}
@@ -225,7 +226,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1429463057363320}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
@@ -258,6 +259,31 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1429463057363320}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!61 &61976607695224588
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1429463057363320}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.000000059604645, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.0000001, y: 2}
+  m_EdgeRadius: 0
 --- !u!95 &95311159843644724
 Animator:
   serializedVersion: 3
@@ -275,7 +301,26 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114420748058466690
+--- !u!114 &114547198675807050
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1429463057363320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6175987cf55ccd647bdfa0c1ba0bd1b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fastestTime: 60
+  fastTime: 150
+  slowTime: 240
+  fastestPhrase: {fileID: 8300000, guid: 939f2cd9783f13a43bcc5efd64cb327a, type: 3}
+  fastPhrase: {fileID: 8300000, guid: cabe896ec5c699846baf0161ad4366d9, type: 3}
+  slowPhrase: {fileID: 8300000, guid: a894570f8ba219a4392fe81e545b9fda, type: 3}
+  slowestPhrase: {fileID: 8300000, guid: b8c00bc0de3eec941bdec3bd3e69f33e, type: 3}
+  nextScene: bounce_level
+--- !u!114 &114746902145756212
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -283,23 +328,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1326401929615440}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2472df783e087a44b895913d3c440aa, type: 3}
+  m_Script: {fileID: 11500000, guid: 69c06faf05b9d8f4da54485e8748e18f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: {x: 0, y: 100, z: 0}
---- !u!136 &136707550022971972
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1429463057363320}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!137 &137958841060723556
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
