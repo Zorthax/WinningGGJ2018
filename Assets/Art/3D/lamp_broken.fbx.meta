@@ -1,0 +1,136 @@
+fileFormatVersion: 2
+guid: 1171058755734c14ea18fa62a3df31cc
+timeCreated: 1517093635
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: lampShade1
+    100004: lampShade2
+    100006: lampShade3
+    100008: lampShade4
+    100010: lampShade5
+    100012: lampShade6
+    100014: lampShade7
+    100016: lampShade8
+    100018: lampShade_pieces
+    100020: lampStand_broken
+    100022: lampStand_broken_inside
+    100024: lampStand_broken_outside
+    400000: //RootNode
+    400002: lampShade1
+    400004: lampShade2
+    400006: lampShade3
+    400008: lampShade4
+    400010: lampShade5
+    400012: lampShade6
+    400014: lampShade7
+    400016: lampShade8
+    400018: lampShade_pieces
+    400020: lampStand_broken
+    400022: lampStand_broken_inside
+    400024: lampStand_broken_outside
+    2300000: lampShade1
+    2300002: lampShade2
+    2300004: lampShade3
+    2300006: lampShade4
+    2300008: lampShade5
+    2300010: lampShade6
+    2300012: lampShade7
+    2300014: lampShade8
+    2300016: lampStand_broken_inside
+    3300000: lampShade1
+    3300002: lampShade2
+    3300004: lampShade3
+    3300006: lampShade4
+    3300008: lampShade5
+    3300010: lampShade6
+    3300012: lampShade7
+    3300014: lampShade8
+    3300016: lampStand_broken_inside
+    4300000: lampShade1
+    4300002: lampShade2
+    4300004: lampShade3
+    4300006: lampShade4
+    4300008: lampShade5
+    4300010: lampShade6
+    4300012: lampShade7
+    4300014: lampShade8
+    4300016: lampStand_broken_inside
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
