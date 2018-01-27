@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 07e6a4bc5e493d945b46097389b0a4d3
-timeCreated: 1516984842
+guid: 2c3c94b5f32d5794188da82f41ca4245
+timeCreated: 1517011379
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: shelf
+    4300000: shelfShort
   materials:
     importMaterials: 1
     materialName: 0
