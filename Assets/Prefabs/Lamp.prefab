@@ -130,8 +130,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1945200037824092}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.14, y: -0.64015007, z: 2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 9.61, y: -4.82, z: 4}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 4348274183661058}
   - {fileID: 4859751690574432}
@@ -303,11 +303,12 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.020489486, y: 0.36482337}
+    - - {x: -0.324929, y: 0.31817776}
+      - {x: 0.020489486, y: 0.36482337}
       - {x: -0.78031063, y: 0.61636037}
       - {x: -0.7790215, y: -0.62461084}
       - {x: 0.020907613, y: -0.35824683}
-      - {x: 0.008536339, y: -0.0051560416}
+      - {x: -0.32499808, y: -0.32534882}
 --- !u!95 &95180811964685036
 Animator:
   serializedVersion: 3
@@ -384,7 +385,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -6.14, y: 0.90373516}
+  m_ConnectedAnchor: {x: 9.61, y: -1.7322297}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
