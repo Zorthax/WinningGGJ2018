@@ -9,12 +9,7 @@ public class ExplodeOnTouch : MonoBehaviour {
     public bool forceBasedOnPosition;
     public Vector2 explosionForce = new Vector3(-300, 200);
 
-    // Use this for initialization
-    void Start ()
-    {
-		
-	}
-	
+
     void OnCollisionEnter2D(Collision2D other)
     {
         if (other.transform.tag == "Player")
