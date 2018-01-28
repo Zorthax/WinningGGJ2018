@@ -9,7 +9,7 @@ public class ArrowSpinAndDisappear : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        Invoke("Spin", 3);
+        Invoke("Spin", 5);
 	}
 	
 	// Update is called once per frame

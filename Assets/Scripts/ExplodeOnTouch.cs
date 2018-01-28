@@ -8,7 +8,19 @@ public class ExplodeOnTouch : MonoBehaviour {
     public GameObject whatToTurnOff;
     public bool forceBasedOnPosition;
     public Vector2 explosionForce = new Vector3(-300, 200);
+    public bool ableToResetItself;
 
+    void Update()
+    {
+        if (ableToResetItself)
+        {
+            if (PlaymodeManager.mode != PlaymodeManager.Mode.playing)
+            {
+                whatToTurnOff.SetActive(true);
+                whatToTurnOn.SetActive(false);
+            }
+        }
+    }
 
     void OnCollisionEnter2D(Collision2D other)
     {

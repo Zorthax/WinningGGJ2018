@@ -21,9 +21,8 @@ public class EndGoal : MonoBehaviour {
     {
         if (other.transform.tag == "Player" && !won)
         {
-            Invoke("ChangeScene", 5);
-            Debug.Log("Changing in 3 seconds");
-            PetesLine();
+            Invoke("ChangeScene", 1);
+            //PetesLine();
             won = true;
         }
     }
@@ -31,6 +30,8 @@ public class EndGoal : MonoBehaviour {
     void Update()
     {
         levelTimer += Time.deltaTime;
+        if (Input.GetKeyDown(KeyCode.Comma))
+            ChangeScene();
     }
 
     void ChangeScene()
