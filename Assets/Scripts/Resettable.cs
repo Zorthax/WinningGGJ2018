@@ -6,12 +6,14 @@ public class Resettable : MonoBehaviour {
 
     Vector3 startPos;
     Quaternion startRot;
+    Rigidbody2D rb;
 
 	// Use this for initialization
 	void Start ()
     {
         startPos = transform.position;
         startRot = transform.rotation;
+        rb = GetComponent<Rigidbody2D>();
 	}
 	
 	// Update is called once per frame
@@ -21,6 +23,8 @@ public class Resettable : MonoBehaviour {
         {
             transform.position = startPos;
             transform.rotation = startRot;
+            if (rb)
+                rb.velocity = Vector3.zero;
         }
 	}
 }

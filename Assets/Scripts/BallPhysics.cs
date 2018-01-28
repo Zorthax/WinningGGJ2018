@@ -161,7 +161,7 @@ public class BallPhysics : MonoBehaviour {
         }
     }
 
-    void Pop()
+    public void Pop()
     {
         foreach(ParticleSystem p in GetComponentsInChildren<ParticleSystem>())
         {
