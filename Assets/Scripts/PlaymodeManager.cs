@@ -7,7 +7,6 @@ public class PlaymodeManager : MonoBehaviour {
     public static Mode mode;
     public enum Mode
     {
-        waiting,
         paused,
         playing
     }
@@ -15,7 +14,7 @@ public class PlaymodeManager : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        mode = Mode.waiting;
+
 	}
 	
 	// Update is called once per frame
@@ -26,7 +25,7 @@ public class PlaymodeManager : MonoBehaviour {
 
     public void StartEnd()
     {
-        if (mode != Mode.playing)
+        if (mode == Mode.paused)
             mode = Mode.playing;
         else mode = Mode.paused;
 
@@ -37,6 +36,7 @@ public class PlaymodeManager : MonoBehaviour {
 
     public void Reset()
     {
+        mode = Mode.paused;
         PickupableManager.ResetPositions();
     }
 }

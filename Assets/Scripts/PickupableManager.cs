@@ -19,7 +19,8 @@ public class PickupableManager : MonoBehaviour {
     {
         foreach (Pickupable p in pickupables)
             p.ReturnToStart();
-            
+
+        Pause();
     }
 
     static public void Begin()

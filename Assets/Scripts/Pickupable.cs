@@ -142,6 +142,7 @@ public class Pickupable : MonoBehaviour {
     public void ReturnToStart()
     {
         transform.position = inventoryPos;
+        state = State.inventory;
     }
 
     public void OnPause()
