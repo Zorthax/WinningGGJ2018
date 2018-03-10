@@ -14,7 +14,7 @@ public class PlaymodeManager : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-
+        mode = Mode.paused;
 	}
 	
 	// Update is called once per frame

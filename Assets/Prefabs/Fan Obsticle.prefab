@@ -68,8 +68,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1257730079935228}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: -1.29, z: 2.33}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: 0.39, y: 0.32000005, z: 4.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4177044556016614}
@@ -85,7 +85,7 @@ Transform:
   m_GameObject: {fileID: 1460461341061740}
   m_LocalRotation: {x: 0, y: 0, z: 0.86972684, w: 0.49353337}
   m_LocalPosition: {x: -0, y: 2.007277, z: 0.32007527}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_Children: []
   m_Father: {fileID: 4105226388597382}
   m_RootOrder: 0
@@ -112,11 +112,12 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 8376b4198ee2015418b6ae1aa917d091, type: 2}
+  - {fileID: 2100000, guid: 394ee0112b601f2478cd34c34421a24b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -127,6 +128,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -144,6 +146,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -159,6 +162,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -205,27 +209,27 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.64240074, y: 0.20949984}
+    - - {x: 0.63408476, y: 0.18827118}
       - {x: -0.0011138916, y: 0.18128443}
       - {x: -0.16092587, y: 0.6499777}
-      - {x: -0.13637638, y: 0.8052497}
-      - {x: -0.2108674, y: 0.7537594}
-      - {x: -0.23286009, y: 0.38906288}
+      - {x: -0.11590008, y: 0.8541426}
+      - {x: -0.17547223, y: 0.7326144}
+      - {x: -0.21418042, y: 0.3691715}
       - {x: -0.213305, y: 0.1009779}
       - {x: -0.23465157, y: -0.024556518}
       - {x: -0.6338, y: -0.16338086}
-      - {x: -0.7739067, y: -0.14209497}
-      - {x: -0.71032286, y: -0.21805012}
-      - {x: -0.15575838, y: -0.22597504}
+      - {x: -0.8356286, y: -0.13578522}
+      - {x: -0.689178, y: -0.18265499}
+      - {x: -0.14422485, y: -0.20666851}
       - {x: 0.011730194, y: -0.22864318}
-      - {x: 0.13568354, y: -0.5230175}
-      - {x: 0.15591145, y: -0.74584985}
-      - {x: 0.21907663, y: -0.7325163}
+      - {x: 0.17178959, y: -0.5795155}
+      - {x: 0.13744134, y: -0.835236}
+      - {x: 0.2023192, y: -0.70940715}
       - {x: 0.22897768, y: -0.12409985}
       - {x: 0.2150569, y: 0.034726143}
       - {x: 0.6101527, y: 0.14233899}
-      - {x: 0.80049324, y: 0.13078475}
-      - {x: 0.7882519, y: 0.18620872}
+      - {x: 0.872495, y: 0.12706606}
+      - {x: 0.78315383, y: 0.16305754}
 --- !u!114 &114482187632777628
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -90,6 +90,7 @@ public class Pickupable : MonoBehaviour {
         }
 
         glow.SetActive(mouseOver);
+        glow.layer = gameObject.layer;
         Vector3 pos = Input.mousePosition;
         pos.z = transform.position.z - mainCam.transform.position.z;
         Vector3 touchPos = mainCam.ScreenToWorldPoint(pos);
@@ -137,6 +138,10 @@ public class Pickupable : MonoBehaviour {
                 }
             }
         }
+
+        if (mainCam.WorldToScreenPoint(transform.position).x > 150)
+            gameObject.layer = 0;
+        else gameObject.layer = 4;
     }
 
     public void ReturnToStart()
