@@ -139,7 +139,7 @@ public class Pickupable : MonoBehaviour {
             }
         }
 
-        if (mainCam.WorldToScreenPoint(transform.position).x > 150)
+        if ((mainCam.WorldToScreenPoint(transform.position).x / Screen.width) * 100 > 12) //not in left-most 12% of screen
             gameObject.layer = 0;
         else gameObject.layer = 4;
     }

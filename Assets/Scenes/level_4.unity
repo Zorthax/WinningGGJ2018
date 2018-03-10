@@ -23,8 +23,8 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.83823526, g: 0.5689118, b: 0.39446363, a: 1}
   m_AmbientEquatorColor: {r: 0.09558824, g: 0.1286004, b: 0.25, a: 1}
   m_AmbientGroundColor: {r: 0.027032875, g: 0.042760402, b: 0.14705884, a: 1}
-  m_AmbientIntensity: 1
-  m_AmbientMode: 1
+  m_AmbientIntensity: 0.6
+  m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
